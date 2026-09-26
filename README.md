@@ -32,7 +32,7 @@ assets/icons/app_icon.png
 
 Place the developer icon here:
 
-assets/icons/er_icon.png
+assets/icons/hr_icon.png
 
 ## APK
 
