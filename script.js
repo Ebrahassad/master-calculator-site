@@ -1,106 +1,87 @@
-const languageButton = document.getElementById("languageButton");
-const screenshots = document.getElementById("screenshots");
-
-let language = localStorage.getItem("site-language") || "ar";
-
-function updateLanguage() {
-
-  const isArabic = language === "ar";
-
-  document.documentElement.lang = language;
-  document.documentElement.dir = isArabic ? "rtl" : "ltr";
-
-  document.querySelectorAll("[data-ar][data-en]").forEach(element => {
-    element.textContent = isArabic
-      ? element.dataset.ar
-      : element.dataset.en;
-  });
-
-  document.getElementById("privacy-ar")
-    .classList.toggle("hidden", !isArabic);
-
-  document.getElementById("privacy-en")
-    .classList.toggle("hidden", isArabic);
-
-  languageButton.textContent = isArabic ? "EN" : "AR";
-
-  screenshots.innerHTML = "";
-
-  const prefix = isArabic ? "a" : "e";
-
-  for (let i = 1; i <= 6; i++) {
-
-    const img = document.createElement("img");
-
-    img.className = "screenshot";
-
-    img.src = `assets/screens/${isArabic ? "ar" : "en"}/${prefix}_${i}.png`;
-
-    img.alt = `Master Calculator ${prefix}_${i}`;
-
-    img.loading = "lazy";
-
-    img.onerror = () => {
-      img.style.display = "none";
-    };
-
-    screenshots.appendChild(img);
-  }
-}
-
-languageButton.addEventListener("click", () => {
-
-  language = language === "ar" ? "en" : "ar";
-
-  localStorage.setItem("site-language", language);
-
-  updateLanguage();
-});
-
-updateLanguage();
-
-
-/* ============================================================
-   SCREENSHOT LANGUAGE SWITCHING
-   ============================================================ */
-
 (function () {
-  function updateScreenshotLanguage(language) {
-    document.querySelectorAll(".app-screen").forEach(function (image) {
+
+  const languageButton =
+    document.getElementById("languageButton");
+
+  let language =
+    localStorage.getItem("masterCalculatorLanguage") || "ar";
+
+
+  function applyLanguage() {
+
+    const isEnglish =
+      language === "en";
+
+    document.documentElement.lang =
+      isEnglish ? "en" : "ar";
+
+    document.documentElement.dir =
+      isEnglish ? "ltr" : "rtl";
+
+
+    document.querySelectorAll(
+      "[data-ar][data-en]"
+    ).forEach(function (element) {
+
+      element.textContent =
+        isEnglish
+          ? element.dataset.en
+          : element.dataset.ar;
+
+    });
+
+
+    document.querySelectorAll(
+      ".app-screen"
+    ).forEach(function (image) {
+
       const source =
-        language === "en"
+        isEnglish
           ? image.dataset.enSrc
           : image.dataset.arSrc;
 
       if (source) {
         image.src = source;
       }
+
     });
 
-    document.querySelectorAll("[data-ar][data-en]").forEach(function (element) {
-      element.textContent =
-        language === "en"
-          ? element.dataset.en
-          : element.dataset.ar;
-    });
+
+    if (languageButton) {
+
+      languageButton.textContent =
+        isEnglish ? "AR" : "EN";
+
+    }
+
+
+    localStorage.setItem(
+      "masterCalculatorLanguage",
+      language
+    );
+
   }
 
-  window.updateScreenshotLanguage = updateScreenshotLanguage;
 
-  const observer = new MutationObserver(function () {
-    const language =
-      document.documentElement.lang === "en" ? "en" : "ar";
+  if (languageButton) {
 
-    updateScreenshotLanguage(language);
-  });
+    languageButton.addEventListener(
+      "click",
+      function () {
 
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["lang", "dir"]
-  });
+        language =
+          language === "ar"
+            ? "en"
+            : "ar";
 
-  const initialLanguage =
-    document.documentElement.lang === "en" ? "en" : "ar";
+        applyLanguage();
 
-  updateScreenshotLanguage(initialLanguage);
+      }
+    );
+
+  }
+
+
+  applyLanguage();
+
 })();

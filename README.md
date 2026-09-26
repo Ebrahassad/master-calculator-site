@@ -1,33 +1,39 @@
-# Master Calculator Hub
+# Master Calculator Website
 
-Official website for Master Calculator Hub.
+Official website for Master Calculator.
 
 ## Screenshots
 
 Arabic:
 
-- `assets/screens/ar/a_1.png`
-- `assets/screens/ar/a_2.png`
-- `assets/screens/ar/a_3.png`
-- `assets/screens/ar/a_4.png`
-- `assets/screens/ar/a_5.png`
-- `assets/screens/ar/a_6.png`
+- a_1.jpg
+- a_2.jpg
+- a_3.jpg
+- a_4.jpg
+- a_5.jpg
+- a_6.jpg
+- a_7.jpg
 
 English:
 
-- `assets/screens/en/e_1.png`
-- `assets/screens/en/e_2.png`
-- `assets/screens/en/e_3.png`
-- `assets/screens/en/e_4.png`
-- `assets/screens/en/e_5.png`
-- `assets/screens/en/e_6.png`
+- e_1.jpg
+- e_2.jpg
+- e_3.jpg
+- e_4.jpg
+- e_5.jpg
+- e_6.jpg
+- e_7.jpg
 
-## Privacy Policy
+## Icons
 
-The privacy policy is included directly on the website and supports Arabic and English.
+Place the application icon here:
 
-## Developer
+assets/icons/app_icon.png
 
-HASSADI
+Place the developer icon here:
 
-https://ebrahassad.github.io/Hassad-Apps/#apps
+assets/icons/er_icon.png
+
+## APK
+
+The website provides a direct download link to the official v1.0.0 APK.

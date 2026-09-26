@@ -1,209 +1,587 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Master Calculator Hub</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#070b18">
 
   <meta name="description"
-        content="Master Calculator Hub - مجموعة شاملة من الحاسبات والأدوات اليومية.">
+        content="Master Calculator — مجموعة متكاملة من الحاسبات العلمية والصحية والمالية والتحويلات.">
 
-  <link rel="icon" href="assets/images/app_icon.png">
+  <title>Master Calculator</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+        href="assets/icons/app_icon.png">
+
+  <link rel="stylesheet"
+        href="style.css">
 </head>
 
 <body>
 
-<div class="math-bg"></div>
-
-<header class="topbar">
-  <div class="brand">
-    <img src="assets/images/app_icon.png" alt="Master Calculator">
-    <div>
-      <h1 data-ar="موسوعة الحاسبات الشاملة"
-          data-en="Master Calculator Hub">
-        موسوعة الحاسبات الشاملة
-      </h1>
-
-      <span data-ar="كل حاسباتك في مكان واحد"
-            data-en="All your calculators in one place">
-        كل حاسباتك في مكان واحد
-      </span>
-    </div>
+  <div class="math-bg" aria-hidden="true">
+    <span>π</span>
+    <span>√</span>
+    <span>∑</span>
+    <span>×</span>
+    <span>÷</span>
+    <span>∫</span>
+    <span>％</span>
+    <span>∞</span>
+    <span>Δ</span>
+    <span>Σ</span>
+    <span>+</span>
+    <span>−</span>
   </div>
 
-  <button id="languageButton" class="language-button">
-    EN
-  </button>
-</header>
+  <header class="topbar">
 
-<main>
+    <a class="brand" href="#home">
+      <img
+        src="assets/icons/app_icon.png"
+        alt="Master Calculator">
 
-  <section class="hero">
-
-    <img class="hero-icon"
-         src="assets/images/app_icon.png"
-         alt="Master Calculator">
-
-    <h2 data-ar="موسوعة الحاسبات الشاملة"
-        data-en="Master Calculator Hub">
-      موسوعة الحاسبات الشاملة
-    </h2>
-
-    <p data-ar="مجموعة متكاملة من الحاسبات العلمية والمالية والصحية وأدوات التحويل في تطبيق واحد."
-       data-en="A complete collection of scientific, financial, health and conversion calculators in one application.">
-      مجموعة متكاملة من الحاسبات العلمية والمالية والصحية وأدوات التحويل في تطبيق واحد.
-    </p>
-
-    <div class="buttons">
-
-      <a class="primary-button"
-         href="#releases"
-         data-ar="تحميل التطبيق"
-         data-en="Download App">
-        تحميل التطبيق
-      </a>
-
-      <a class="secondary-button"
-         href="#privacy"
-         data-ar="سياسة الخصوصية"
-         data-en="Privacy Policy">
-        سياسة الخصوصية
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <section class="screens-section">
-
-    <h2 data-ar="لقطات من التطبيق"
-        data-en="App Screenshots">
-      لقطات من التطبيق
-    </h2>
-
-    <p class="section-subtitle"
-       data-ar="استكشف واجهة التطبيق ومجموعة الحاسبات المتوفرة."
-       data-en="Explore the application interface and available calculators.">
-      استكشف واجهة التطبيق ومجموعة الحاسبات المتوفرة.
-    </p>
-
-    <div id="screenshots" class="screenshots"></div>
-
-  </section>
-
-
-  <section id="releases" class="card-section">
-
-    <h2 data-ar="الإصدارات"
-        data-en="Releases">
-      الإصدارات
-    </h2>
-
-    <p data-ar="يمكنك تحميل أحدث إصدار من التطبيق من صفحة الإصدارات."
-       data-en="Download the latest version of the application from the releases page.">
-      يمكنك تحميل أحدث إصدار من التطبيق من صفحة الإصدارات.
-    </p>
-
-    <a id="releaseLink"
-       class="primary-button"
-       href="releases/"
-       data-ar="عرض الإصدارات"
-       data-en="View Releases">
-      عرض الإصدارات
+      <span>Master Calculator</span>
     </a>
 
-  </section>
+    <nav class="nav">
+
+      <a href="#home"
+         data-ar="الرئيسية"
+         data-en="Home">
+        الرئيسية
+      </a>
+
+      <a href="#features"
+         data-ar="المميزات"
+         data-en="Features">
+        المميزات
+      </a>
+
+      <a href="#screenshots"
+         data-ar="الصور"
+         data-en="Screenshots">
+        الصور
+      </a>
+
+      <a href="privacy.html"
+         data-ar="الخصوصية"
+         data-en="Privacy">
+        الخصوصية
+      </a>
+
+    </nav>
+
+    <button
+      class="language-button"
+      id="languageButton"
+      type="button">
+      EN
+    </button>
+
+  </header>
 
 
-  <section id="privacy" class="privacy card-section">
+  <main id="home">
 
-    <h2 data-ar="سياسة الخصوصية"
-        data-en="Privacy Policy">
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="hero-icon">
+          <img
+            src="assets/icons/app_icon.png"
+            alt="Master Calculator">
+        </div>
+
+        <div class="hero-badge"
+             data-ar="حاسباتك في مكان واحد"
+             data-en="All your calculators in one place">
+          حاسباتك في مكان واحد
+        </div>
+
+        <h1
+          data-ar="Master Calculator"
+          data-en="Master Calculator">
+          Master Calculator
+        </h1>
+
+        <p class="hero-description"
+           data-ar="مجموعة متكاملة من الحاسبات العلمية والعملية والصحية والمالية، مع أدوات التحويل والحسابات اليومية."
+           data-en="A complete collection of scientific, practical, health and finance calculators, with conversion tools for everyday calculations.">
+          مجموعة متكاملة من الحاسبات العلمية والعملية والصحية والمالية،
+          مع أدوات التحويل والحسابات اليومية.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="download-button"
+            href="https://github.com/Ebrahassad/master-calculator-site/releases/download/v1.0.0/master-calculator.apk"
+            download="master-calculator.apk">
+
+            <span class="download-icon">↓</span>
+
+            <span
+              data-ar="تحميل APK"
+              data-en="Download APK">
+              تحميل APK
+            </span>
+
+          </a>
+
+          <a
+            class="secondary-button"
+            href="#screenshots"
+            data-ar="استكشف التطبيق"
+            data-en="Explore the App">
+            استكشف التطبيق
+          </a>
+
+        </div>
+
+        <div class="version-line">
+          <span>v1.0.0</span>
+          <span>•</span>
+          <span
+            data-ar="Android"
+            data-en="Android">
+            Android
+          </span>
+          <span>•</span>
+          <span
+            data-ar="يعمل دون اتصال"
+            data-en="Offline Ready">
+            يعمل دون اتصال
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="section"
+             id="features">
+
+      <div class="section-heading">
+
+        <span class="section-label"
+              data-ar="لماذا Master Calculator؟"
+              data-en="Why Master Calculator?">
+          لماذا Master Calculator؟
+        </span>
+
+        <h2
+          data-ar="كل الأدوات التي تحتاجها"
+          data-en="Everything you need">
+          كل الأدوات التي تحتاجها
+        </h2>
+
+        <p
+          data-ar="واجهة واحدة تجمع مجموعة متنوعة من أدوات الحساب والتحويل في تطبيق واحد."
+          data-en="One application bringing together a wide range of calculation and conversion tools.">
+          واجهة واحدة تجمع مجموعة متنوعة من أدوات الحساب والتحويل في تطبيق واحد.
+        </p>
+
+      </div>
+
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+          <div class="feature-icon">∑</div>
+          <h3
+            data-ar="الحساب العلمي"
+            data-en="Scientific">
+            الحساب العلمي
+          </h3>
+          <p
+            data-ar="عمليات ودوال علمية متقدمة للحسابات اليومية والهندسية."
+            data-en="Advanced scientific functions for everyday and engineering calculations.">
+            عمليات ودوال علمية متقدمة للحسابات اليومية والهندسية.
+          </p>
+        </article>
+
+
+        <article class="feature-card">
+          <div class="feature-icon">⇄</div>
+          <h3
+            data-ar="التحويلات"
+            data-en="Conversions">
+            التحويلات
+          </h3>
+          <p
+            data-ar="تحويل سريع بين الوحدات والعملات والأنواع المختلفة."
+            data-en="Fast conversion between units, currencies and different formats.">
+            تحويل سريع بين الوحدات والعملات والأنواع المختلفة.
+          </p>
+        </article>
+
+
+        <article class="feature-card">
+          <div class="feature-icon">♥</div>
+          <h3
+            data-ar="الصحة"
+            data-en="Health">
+            الصحة
+          </h3>
+          <p
+            data-ar="مجموعة أدوات وحاسبات مرتبطة بالصحة واللياقة."
+            data-en="Useful tools and calculators related to health and fitness.">
+            مجموعة أدوات وحاسبات مرتبطة بالصحة واللياقة.
+          </p>
+        </article>
+
+
+        <article class="feature-card">
+          <div class="feature-icon">$</div>
+          <h3
+            data-ar="المال"
+            data-en="Finance">
+            المال
+          </h3>
+          <p
+            data-ar="حاسبات مالية متعددة للفوائد والقروض والاستثمار وغيرها."
+            data-en="Multiple financial calculators for interest, loans, investment and more.">
+            حاسبات مالية متعددة للفوائد والقروض والاستثمار وغيرها.
+          </p>
+        </article>
+
+
+        <article class="feature-card">
+          <div class="feature-icon">%</div>
+          <h3
+            data-ar="الحسابات اليومية"
+            data-en="Daily Calculations">
+            الحسابات اليومية
+          </h3>
+          <p
+            data-ar="أدوات بسيطة وسريعة للنسب والخصومات والعمر والتاريخ وغيرها."
+            data-en="Quick tools for percentages, discounts, age, dates and more.">
+            أدوات بسيطة وسريعة للنسب والخصومات والعمر والتاريخ وغيرها.
+          </p>
+        </article>
+
+
+        <article class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3
+            data-ar="سريع وبسيط"
+            data-en="Fast & Simple">
+            سريع وبسيط
+          </h3>
+          <p
+            data-ar="تصميم واضح وسريع للوصول إلى الأداة التي تحتاجها."
+            data-en="A clean and fast interface designed for quick access.">
+            تصميم واضح وسريع للوصول إلى الأداة التي تحتاجها.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- SCREENSHOTS -->
+
+    <section class="section screenshots-section"
+             id="screenshots">
+
+      <div class="section-heading">
+
+        <span class="section-label"
+              data-ar="معرض التطبيق"
+              data-en="App Gallery">
+          معرض التطبيق
+        </span>
+
+        <h2
+          data-ar="شاهد التطبيق من الداخل"
+          data-en="See the app in action">
+          شاهد التطبيق من الداخل
+        </h2>
+
+        <p
+          data-ar="صور حقيقية من واجهة Master Calculator."
+          data-en="Real screenshots from the Master Calculator interface.">
+          صور حقيقية من واجهة Master Calculator.
+        </p>
+
+      </div>
+
+
+      <div class="screenshots-grid">
+
+        <figure class="screenshot-card">
+          <img
+            class="app-screen"
+            src="assets/screens/ar/a_1.jpg"
+            data-ar-src="assets/screens/ar/a_1.jpg"
+            data-en-src="assets/screens/en/e_1.jpg"
+            alt="Master Calculator">
+          <figcaption
+            data-ar="شاشة البداية"
+            data-en="Home Screen">
+            شاشة البداية
+          </figcaption>
+        </figure>
+
+
+        <figure class="screenshot-card">
+          <img
+            class="app-screen"
+            src="assets/screens/ar/a_2.jpg"
+            data-ar-src="assets/screens/ar/a_2.jpg"
+            data-en-src="assets/screens/en/e_2.jpg"
+            alt="Master Calculator Menu">
+          <figcaption
+            data-ar="القائمة الجانبية"
+            data-en="Side Menu">
+            القائمة الجانبية
+          </figcaption>
+        </figure>
+
+
+        <figure class="screenshot-card">
+          <img
+            class="app-screen"
+            src="assets/screens/ar/a_3.jpg"
+            data-ar-src="assets/screens/ar/a_3.jpg"
+            data-en-src="assets/screens/en/e_3.jpg"
+            alt="Scientific Calculator">
+          <figcaption
+            data-ar="الآلة الحاسبة العلمية"
+            data-en="Scientific Calculator">
+            الآلة الحاسبة العلمية
+          </figcaption>
+        </figure>
+
+
+        <figure class="screenshot-card">
+          <img
+            class="app-screen"
+            src="assets/screens/ar/a_4.jpg"
+            data-ar-src="assets/screens/ar/a_4.jpg"
+            data-en-src="assets/screens/en/e_4.jpg"
+            alt="Conversions">
+          <figcaption
+            data-ar="التحويلات"
+            data-en="Conversions">
+            التحويلات
+          </figcaption>
+        </figure>
+
+
+        <figure class="screenshot-card">
+          <img
+            class="app-screen"
+            src="assets/screens/ar/a_5.jpg"
+            data-ar-src="assets/screens/ar/a_5.jpg"
+            data-en-src="assets/screens/en/e_5.jpg"
+            alt="Health">
+          <figcaption
+            data-ar="الصحة"
+            data-en="Health">
+            الصحة
+          </figcaption>
+        </figure>
+
+
+        <figure class="screenshot-card">
+          <img
+            class="app-screen"
+            src="assets/screens/ar/a_6.jpg"
+            data-ar-src="assets/screens/ar/a_6.jpg"
+            data-en-src="assets/screens/en/e_6.jpg"
+            alt="Calculations">
+          <figcaption
+            data-ar="الحسابات"
+            data-en="Calculations">
+            الحسابات
+          </figcaption>
+        </figure>
+
+
+        <figure class="screenshot-card">
+          <img
+            class="app-screen"
+            src="assets/screens/ar/a_7.jpg"
+            data-ar-src="assets/screens/ar/a_7.jpg"
+            data-en-src="assets/screens/en/e_7.jpg"
+            alt="Finance">
+          <figcaption
+            data-ar="المال"
+            data-en="Finance">
+            المال
+          </figcaption>
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECT -->
+
+    <section class="project-section">
+
+      <div class="project-card">
+
+        <div class="project-icon">
+          <img
+            src="assets/icons/app_icon.png"
+            alt="Master Calculator">
+        </div>
+
+        <div>
+
+          <span class="section-label"
+                data-ar="المشروع"
+                data-en="The Project">
+            المشروع
+          </span>
+
+          <h2
+            data-ar="Master Calculator"
+            data-en="Master Calculator">
+            Master Calculator
+          </h2>
+
+          <p
+            data-ar="تطبيق حاسبات متعدد الأدوات مصمم ليكون سريعًا وواضحًا وسهل الاستخدام."
+            data-en="A multi-tool calculator app designed to be fast, clear and easy to use.">
+            تطبيق حاسبات متعدد الأدوات مصمم ليكون سريعًا وواضحًا وسهل الاستخدام.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DEVELOPER -->
+
+    <section class="developer-section">
+
+      <a
+        class="developer-card"
+        href="https://ebrahassad.github.io/Hassadi-Apps/#apps"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          src="assets/icons/er_icon.png"
+          alt="HASSADI">
+
+        <div>
+
+          <span
+            data-ar="تطوير"
+            data-en="Developed by">
+            تطوير
+          </span>
+
+          <strong>HASSADI</strong>
+
+        </div>
+
+      </a>
+
+    </section>
+
+
+    <!-- DOWNLOAD -->
+
+    <section class="download-section">
+
+      <div class="download-card">
+
+        <div>
+
+          <span class="section-label"
+                data-ar="الإصدار الحالي"
+                data-en="Current Release">
+            الإصدار الحالي
+          </span>
+
+          <h2>Master Calculator v1.0.0</h2>
+
+          <p
+            data-ar="نسخة Android — ملف APK جاهز للتثبيت."
+            data-en="Android version — APK ready to install.">
+            نسخة Android — ملف APK جاهز للتثبيت.
+          </p>
+
+        </div>
+
+        <a
+          class="download-button"
+          href="https://github.com/Ebrahassad/master-calculator-site/releases/download/v1.0.0/master-calculator.apk"
+          download="master-calculator.apk">
+
+          ↓
+
+          <span
+            data-ar="تحميل التطبيق"
+            data-en="Download App">
+            تحميل التطبيق
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-brand">
+
+      <img
+        src="assets/icons/app_icon.png"
+        alt="Master Calculator">
+
+      <strong>Master Calculator</strong>
+
+    </div>
+
+    <p
+      data-ar="© 2026 HASSADI. جميع الحقوق محفوظة."
+      data-en="© 2026 HASSADI. All rights reserved.">
+      © 2026 HASSADI. جميع الحقوق محفوظة.
+    </p>
+
+    <a
+      href="https://ebrahassad.github.io/Hassadi-Apps/#apps"
+      target="_blank"
+      rel="noopener noreferrer">
+      HASSADI
+    </a>
+
+    <a
+      href="privacy.html"
+      data-ar="سياسة الخصوصية"
+      data-en="Privacy Policy">
       سياسة الخصوصية
-    </h2>
+    </a>
 
-    <div id="privacy-ar">
-
-      <h3>سياسة الخصوصية</h3>
-
-      <p>
-        يحترم Master Calculator خصوصية المستخدمين.
-        يهدف التطبيق إلى توفير أدوات للحساب والتحويل بطريقة سهلة ومباشرة.
-      </p>
-
-      <p>
-        لا يتم بيع المعلومات الشخصية للمستخدمين أو مشاركتها لأغراض تسويقية.
-      </p>
-
-      <p>
-        قد تعتمد بعض الميزات على خدمات خارجية عند الحاجة، مثل تحديثات
-        أسعار العملات أو الخدمات المرتبطة بالإعلانات، وفقًا للخدمة المستخدمة.
-      </p>
-
-      <p>
-        باستخدام التطبيق، فإنك توافق على استخدامه وفق هذه السياسة.
-      </p>
-
-    </div>
-
-    <div id="privacy-en" class="hidden">
-
-      <h3>Privacy Policy</h3>
-
-      <p>
-        Master Calculator respects the privacy of its users.
-        The application provides calculation and conversion tools in a simple
-        and convenient way.
-      </p>
-
-      <p>
-        Personal information is not sold or shared for marketing purposes.
-      </p>
-
-      <p>
-        Some features may rely on external services when necessary, such as
-        live currency updates or advertising-related services, according to
-        the service being used.
-      </p>
-
-      <p>
-        By using the application, you agree to use it in accordance with
-        this policy.
-      </p>
-
-    </div>
-
-  </section>
-
-</main>
+  </footer>
 
 
-<footer>
-
-  <img src="assets/images/app_icon.png"
-       alt="HASSADI">
-
-  <p>
-    <span data-ar="© 2026 جميع الحقوق محفوظة"
-          data-en="© 2026 All Rights Reserved">
-      © 2026 جميع الحقوق محفوظة
-    </span>
-  </p>
-
-  <a href="https://ebrahassad.github.io/Hassad-Apps/#apps"
-     target="_blank"
-     rel="noopener">
-    HASSADI
-  </a>
-
-</footer>
-
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
