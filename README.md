@@ -28,11 +28,11 @@ English:
 
 Place the application icon here:
 
-assets/icons/app_icon.png
+assets/screens/icons/app_icon.png
 
 Place the developer icon here:
 
-assets/icons/hr_icon.png
+assets/screens/icons/hr_icon.png
 
 ## APK
 
