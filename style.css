@@ -299,3 +299,113 @@ footer a {
   }
 
 }
+
+
+/* ============================================================
+   MASTER CALCULATOR SCREENSHOTS
+   ============================================================ */
+
+.screenshots-section {
+  position: relative;
+  max-width: 1200px;
+  margin: 90px auto 60px;
+  padding: 0 22px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: .75;
+}
+
+.section-heading h2 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 5vw, 44px);
+}
+
+.section-heading p {
+  margin: 0 auto;
+  max-width: 650px;
+  line-height: 1.8;
+  opacity: .75;
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.screenshot-card {
+  margin: 0;
+  padding: 10px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .055);
+  border: 1px solid rgba(255, 255, 255, .10);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .20);
+  backdrop-filter: blur(10px);
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, .24);
+}
+
+.screenshot-card .app-screen {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #111;
+}
+
+.screenshot-card figcaption {
+  padding: 13px 6px 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .screenshots-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .screenshots-section {
+    margin-top: 60px;
+    padding: 0 14px;
+  }
+
+  .screenshots-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .screenshot-card {
+    padding: 7px;
+    border-radius: 17px;
+  }
+
+  .screenshot-card .app-screen {
+    border-radius: 12px;
+  }
+
+  .screenshot-card figcaption {
+    font-size: 12px;
+    padding-top: 9px;
+  }
+}

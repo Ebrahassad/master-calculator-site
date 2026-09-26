@@ -58,3 +58,49 @@ languageButton.addEventListener("click", () => {
 });
 
 updateLanguage();
+
+
+/* ============================================================
+   SCREENSHOT LANGUAGE SWITCHING
+   ============================================================ */
+
+(function () {
+  function updateScreenshotLanguage(language) {
+    document.querySelectorAll(".app-screen").forEach(function (image) {
+      const source =
+        language === "en"
+          ? image.dataset.enSrc
+          : image.dataset.arSrc;
+
+      if (source) {
+        image.src = source;
+      }
+    });
+
+    document.querySelectorAll("[data-ar][data-en]").forEach(function (element) {
+      element.textContent =
+        language === "en"
+          ? element.dataset.en
+          : element.dataset.ar;
+    });
+  }
+
+  window.updateScreenshotLanguage = updateScreenshotLanguage;
+
+  const observer = new MutationObserver(function () {
+    const language =
+      document.documentElement.lang === "en" ? "en" : "ar";
+
+    updateScreenshotLanguage(language);
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["lang", "dir"]
+  });
+
+  const initialLanguage =
+    document.documentElement.lang === "en" ? "en" : "ar";
+
+  updateScreenshotLanguage(initialLanguage);
+})();
